@@ -186,9 +186,9 @@ Subs are paid per serve or per attempt, not by the hour. Each sub has a split: `
 ## Mobile app for servers
 
 - **Android:** [Google Play](https://play.google.com/store/apps/details?id=com.zensched.app)
-- **iOS:** [TestFlight](https://testflight.apple.com/join/Wp51m5Yq)
+- **iOS:** [App Store](https://apps.apple.com/us/app/zensched/id6800081657)
 
-In solo mode you invite yourself; the email arrives at your own address, you install the app, and your attempt windows appear as they are created. Each one shows the address and time; you check in on arrival (GPS-verified), knock, fill in the Attempt Record with the door photo, and check out. Subs get the same email when you add them. iOS is TestFlight for now: builds expire every 90 days and the install is unfamiliar; ask which phones your subs carry.
+In solo mode you invite yourself; the email arrives at your own address, you install the app, and your attempt windows appear as they are created. Each one shows the address and time; you check in on arrival (GPS-verified), knock, fill in the Attempt Record with the door photo, and check out. Subs get the same email when you add them.
 
 ## Troubleshooting
 
