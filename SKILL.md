@@ -92,7 +92,7 @@ Submission `data` comes back keyed by the identifiers above. Select values are *
 | `refused_to_accept` | `refused` | `attempted` | ask: some servers treat refusal as service (drop service); if the owner says so, set attempt `served`, manner `refused`, and the case `served` |
 | `no_answer`, `evasive___refused_door`, `not_at_address___moved`, `bad_address`, `other` | `not_served` | `attempted` | stays `open` (or `not_served` when the owner closes it as a bad address) |
 
-Store the raw key in `attempts.outcome`. `show_if` is honored on the phone and the web, so "Physical description" stays hidden when outcome is no answer. A submission with the door photo bills $0.15 instead of $0.05 (the photo is required, so plan on $0.15).
+Store the raw key in `attempts.outcome`. `show_if` is honored on the phone, so "Physical description" stays hidden when outcome is no answer. A submission with the door photo bills $0.15 instead of $0.05 (the photo is required, so plan on $0.15).
 
 **Tell servers once, and again if it slips:** the description field is physical only. "Hispanic male, 40s, 5'8", heavy build, grey hoodie, said he was the brother" is right. "Carlos Reyes" is not, and neither is the plaintiff, the firm, or the case caption in the notes.
 
