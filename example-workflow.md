@@ -83,7 +83,7 @@ form_create:
   {"type": "textarea", "label": "Physical description of person contacted (no names)", "identifier": "person_description",
    "show_if": {"field": "outcome", "op": "not_equals", "value": "no_answer", "action": "show"}},
   {"type": "text", "label": "Vehicles / signs of occupancy", "identifier": "vehicles_seen", "placeholder": "e.g. blue Civic in drive, lights on"},
-  {"type": "photo", "label": "Photo of door / posted notice / address marker", "identifier": "door_photo", "max_images": 3, "required": true},
+  {"type": "photo", "label": "Photo of door / posted notice / address marker", "identifier": "door_photo", "max_images": 3, "required": true, "stamp_photos": true},
   {"type": "select", "label": "Documents left", "identifier": "docs_left", "options": ["Yes", "No"]},
   {"type": "textarea", "label": "Notes for the file", "identifier": "notes"}
 ]
@@ -484,7 +484,7 @@ sqlite_query: SELECT * FROM due_diligence_log WHERE case_no = '27-CV-HC-26-4410'
 >    letter photographed (3). GPS-verified, 10 m. Server: Luis Ortega.
 > ```
 >
-> Facts for your diligence paragraph: 3 attempts on 2 different days (Tue, Thu) at 3 times of day (morning, evening, midday), 1 address, 3 of 3 photographed, 3 of 3 GPS-verified. Whether that satisfies the court's rule is your judgment. Photo references: submissions 3402, 3403, 3405 on ZenSched (already read; re-listing is free). If you were in California this would matter more: the photos are not stamped with date/time/GPS by ZenSched, so from 2027 you'd shoot with the camera's stamp overlay on.
+> Facts for your diligence paragraph: 3 attempts on 2 different days (Tue, Thu) at 3 times of day (morning, evening, midday), 1 address, 3 of 3 photographed, 3 of 3 GPS-verified. Whether that satisfies the court's rule is your judgment. Photo references: submissions 3402, 3403, 3405 on ZenSched (already read; re-listing is free). The door-photo field sets `"stamp_photos": true` for readable date/time/GPS on exported JPEGs (gallery picks without EXIF may show date/time only).
 
 "Diligence log for Reyes" produces the same for 27-CV-26-11870: attempt 1 Tue 7:14 am no answer (F-150, TV on, 2 photos, 8 m), attempt 2 Wed 6:53 pm served personally with the description (1 photo, 7 m). Both by Dana Whitfield, registration Hennepin 4471 shown for the affidavit.
 

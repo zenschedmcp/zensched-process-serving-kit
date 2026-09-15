@@ -74,7 +74,7 @@ form_create:
   {"type": "textarea", "label": "Physical description of person contacted (no names)", "identifier": "person_description",
    "show_if": {"field": "outcome", "op": "not_equals", "value": "no_answer", "action": "show"}},
   {"type": "text", "label": "Vehicles / signs of occupancy", "identifier": "vehicles_seen", "placeholder": "e.g. blue Civic in drive, lights on"},
-  {"type": "photo", "label": "Photo of door / posted notice / address marker", "identifier": "door_photo", "max_images": 3, "required": true},
+  {"type": "photo", "label": "Photo of door / posted notice / address marker", "identifier": "door_photo", "max_images": 3, "required": true, "stamp_photos": true},
   {"type": "select", "label": "Documents left", "identifier": "docs_left", "options": ["Yes", "No"]},
   {"type": "textarea", "label": "Notes for the file", "identifier": "notes"}
 ]
@@ -202,7 +202,7 @@ If a submission's description contains a name, keep it locally, strip it from an
 
 3. Add one line after the list with the variety facts the owner will want to check against their rule: "3 attempts on 3 different days (Tue, Thu, Sat), 3 times of day (evening, morning, midday), 2 addresses, 3 of 3 with a door photo, 2 of 3 GPS-verified." Do not say whether that is enough (rule 1).
 4. Where `time_source = scheduled`, write "(time per the server; no GPS punch recorded)". Where `gps_verified = 0`, give the distance and let the owner explain it.
-5. Offer the photo references: `record_dc_id` per attempt, and remind the owner the images are on ZenSched (`form_submissions` returns `media[].cdn_url`; they were read once already, so re-listing is free). **California servers:** ZenSched does not burn the date, time, and GPS stamp into the image; from January 1, 2027 CCP 417.10 wants a readable stamp on the photo itself. Tell them to shoot with the phone camera's timestamp / GPS overlay on and upload that image, until the platform adds burned-in stamps.
+5. Offer the photo references: `record_dc_id` per attempt, and remind the owner the images are on ZenSched (`form_submissions` returns `media[].cdn_url`; they were read once already, so re-listing is free). **California servers:** the door-photo field sets `"stamp_photos": true` so exported JPEGs carry readable date, time, and GPS from capture metadata. Gallery picks without EXIF may stamp date/time only. The affidavit is still yours to swear.
 
 ### Cases open / at risk
 
