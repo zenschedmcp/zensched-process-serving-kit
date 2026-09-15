@@ -211,7 +211,7 @@ In solo mode you invite yourself; the email arrives at your own address, you ins
 | Same complex geocoded twice | Address typed differently ("Apt 12" vs "#12", "Ave" vs "Avenue") | Tell the AI it is the same place; it merges the `places` rows and keeps one location |
 | `shift_create` fails: date outside the event | The attempt is after the address's event window (`event_valid_until`); the case ran long or the deadline moved | The AI rolls a new event for that address (free) and retries; "the deadline on Reyes moved to the 30th" first if that is why |
 | Case shows in "ready for substitute" and I don't think it is | The flag counts attempts against the fee's included attempts | It is a count, not a rule. Ignore it, or change the case's `included_attempts` |
-| Door photos have no date/time stamp on them | ZenSched does not watermark images | Turn on your camera's timestamp / GPS overlay before shooting (required in California from 2027) |
+| Gallery pick without EXIF may stamp date/time only | `stamp_photos` on door-photo field | Live camera at the door is best for full GPS on the JPEG (AB 747 from 2027) |
 | Mileage deduction looks off | `irs_mileage_rate` still last year's | "Set the mileage rate to 0.72"; existing trips keep their snapshot |
 | AI asks you to run SQL yourself | It does not have `SKILL.md` loaded | Re-paste `SKILL.md` as project instructions |
 

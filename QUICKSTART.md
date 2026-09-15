@@ -4,7 +4,7 @@ Setup is about 15 minutes, once. After that everything is plain English to your 
 
 You need: Claude Desktop (or Cursor) and [Node.js LTS](https://nodejs.org/) installed. Nothing else.
 
-Before you start, read the "This is not an affidavit generator" section of `README.md`. Short version: this kit puts every attempt on your phone, GPS-stamps it at the door, and hands you the diligence log; it does not write the affidavit, does not know your state's rules, does not watermark photos (California servers: camera timestamp overlay on from 2027), and is not a panic button. Defendant names, phones, and documents stay on your computer; ZenSched only ever sees a serve address, a label with the court case number, and the Attempt Record.
+Before you start, read the "This is not an affidavit generator" section of `README.md`. Short version: this kit puts every attempt on your phone, GPS-stamps it at the door, and hands you the diligence log; it does not write the affidavit, does not know your state's rules, burns readable date/time/GPS onto door photos when `"stamp_photos": true` (AB 747 from 2027), and is not a panic button. Defendant names, phones, and documents stay on your computer; ZenSched only ever sees a serve address, a label with the court case number, and the Attempt Record.
 
 ## 1. Make a data folder
 
@@ -81,7 +81,7 @@ Same, with the first window where you said.
 
 ## 7. The attempt
 
-Your phone shows the window with the address. At the door, **Check in** (GPS-verified). Knock. Open the **Attempt Record** on the shift: outcome, who accepted if substituted, physical description, vehicles / lights, door photo (California: camera timestamp overlay on), documents left, notes. Submit. **Check out**.
+Your phone shows the window with the address. At the door, **Check in** (GPS-verified). Knock. Open the **Attempt Record** on the shift: outcome, who accepted if substituted, physical description, vehicles / lights, door photo (`stamp_photos` enabled in the kit), documents left, notes. Submit. **Check out**.
 
 ## 8. "I'm here now"
 
